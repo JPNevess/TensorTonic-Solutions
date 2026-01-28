@@ -19,8 +19,6 @@ def train_logistic_regression(X, y, lr=0.1, steps=1000):
         
         dw = (1 / N) * np.dot(X.T, error)
         db = (1 / N) * np.sum(error)
-
-        # 3. Atualizar Parâmetros
         w -= lr * dw
         b -= lr * db
     return (w,b)
